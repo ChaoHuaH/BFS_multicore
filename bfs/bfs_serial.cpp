@@ -5,26 +5,27 @@ using namespace std;
 
 vector<int> Graph::BFS(int root, vector<int> &pred)
 {
-    cout << "## Serial BFS => ";
+    // cout << "## Serial BFS => ";
     // Graph::printAdjList();
 
     int level = 0;
+    list<int> queue;
+    list<int> next_queue;
 
     for (unsigned int i = 0; i < num_vertices && i < pred.size(); ++i) {
         pred[i] = -1;
     }
 
-    list<int> queue;
-    list<int> next_queue;
-    queue.push_back(root);
     // pred[root] = root;
     pred[root] = level;
+    queue.push_back(root);
 
     while (!queue.empty())
     {
         
         level++;
         int n = queue.size();
+
         for (int i = 0; i < n; i++)
         {
 
