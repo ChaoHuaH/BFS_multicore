@@ -1,0 +1,19 @@
+Two versions of implementation of BFS: serial and OpenMP
+Reulst is the level of each node start from level 0
+
+
+# Compile
+make
+make bfs_serial
+make bfs_omp
+
+# Execute
+./EXEC input_file answer_file
+./bfs_serial ../input/node10.in ../input/node10_root
+./bfs_omp ../input/node10.in ../input/node10_root
+
+# Content of inpute_file
+first line: number of vertices
+second line: numer of edges
+following line: two number represent an edge
+
