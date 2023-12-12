@@ -7,7 +7,6 @@ using namespace std;
 
 vector<int> Graph::BFS(int root, vector<int> &pred)
 {
-    // cout << "## OpenMP BFS => ";
 
     int level = 0;
     list<int> queue;
